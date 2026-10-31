@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  order-probe:
+    build: .
+    environment:
+      - SOLANA_RPC_URL=${SOLANA_RPC_URL:-https://api.mainnet-beta.solana.com}
+      - SPEND_CAP_SOL=${SPEND_CAP_SOL:-0.05}
+      # Keys must be mounted via env/volume only, never committed to git
+      - SOLANA_PRIVATE_KEY=${SOLANA_PRIVATE_KEY:-}
+    volumes:
+      - ./data:/app/data
+      - ./reports:/app/reports
+    command: ["--mode", "analyze", "--output-dir", "/app/reports"]

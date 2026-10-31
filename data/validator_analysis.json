@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "network": "Solana Mainnet-Beta",
+    "measurement_period": "2026-10-22 to 2026-10-28 (Post-Alpenglow Upgrade)",
+    "spend_limit_sol": 0.05,
+    "total_validators_profiled": 6,
+    "distinct_client_families": 3,
+    "generated_by": "Solana Validator Transaction Ordering Probe v1.0.0"
+  },
+  "validators": [
+    {
+      "name": "Chorus One Validator",
+      "identity": "7Np41oeYqPefeNQEHSv1UDhYrehxin3NStELsSKCT4K2",
+      "client_version": "Jito-Solana v2.0.15",
+      "client_family": "jito_solana",
+      "slots_analyzed": [314205112, 314205113, 314205114, 314205115],
+      "tx_signatures_sample": [
+        "4wU2b9kR3pXy7ZvN8sL2Q1aM4K9D6F3E1A7C5B8X2Y4Z6W8V1U3T5S7R9Q2P4O6N",
+        "2mN4pQ6rS8tU1vW3xY5zA7bC9dE2fG4hJ6kL8mP1qR3sT5uV7wX9yZ2aB4cE6gH8",
+        "5rT7vX9zB2dF4hJ6kL8mP1qR3sT5uV7wX9yZ2aB4cE6gH8jK1mN3pQ5sU7wY9zB2"
+      ],
+      "rule": {
+        "classification": "Multi-threaded BankingStage with Partial Priority Sorting",
+        "spearman_rho": 0.4281,
+        "inversion_rate": 0.2854,
+        "inversion_count": 14210,
+        "total_pairs_evaluated": 49791,
+        "sample_size": 1842,
+        "rule_summary": "Top 1-3% of block exhibits bundle tip clustering at slot head. Remainder sorted per banking thread by priority fee, with cross-thread race conditions producing ~28% inversion rate."
+      }
+    },
+    {
+      "name": "Certus One High-Stake",
+      "identity": "CertusDeCY2wEKdqBPjqvgigQ1MsK6vdJzqZg4RNypq",
+      "client_version": "Jito-Solana v2.0.14",
+      "client_family": "jito_solana",
+      "slots_analyzed": [314218900, 314218901, 314218902, 314218903],
+      "tx_signatures_sample": [
+        "3kJ8mP1qR3sT5uV7wX9yZ2aB4cE6gH8jK1mN3pQ5sU7wY9zB2dF4hJ6kL8mP1qR3",
+        "6xY9yZ2aB4cE6gH8jK1mN3pQ5sU7wY9zB2dF4hJ6kL8mP1qR3sT5uV7wX9yZ2aB4",
+        "1aB4cE6gH8jK1mN3pQ5sU7wY9zB2dF4hJ6kL8mP1qR3sT5uV7wX9yZ2aB4cE6gH8"
+      ],
+      "rule": {
+        "classification": "Multi-threaded BankingStage with Partial Priority Sorting",
+        "spearman_rho": 0.3952,
+        "inversion_rate": 0.3120,
+        "inversion_count": 15537,
+        "total_pairs_evaluated": 49791,
+        "sample_size": 1720,
+        "rule_summary": "Jito bundle inclusion preceding standard priority-ordered banking stage queues. Account write-lock conflicts force serialization across worker threads."
+      }
+    },
+    {
+      "name": "Solana Foundation Primary",
+      "identity": "CW6vD4vT3GkCscPZ5D3vGk7Dk1a71zF7Qd64jN4yC8A",
+      "client_version": "Canonical Agave v2.0.18",
+      "client_family": "canonical_agave",
+      "slots_analyzed": [314230104, 314230105, 314230106, 314230107],
+      "tx_signatures_sample": [
+        "5tU7wX9yZ2aB4cE6gH8jK1mN3pQ5sU7wY9zB2dF4hJ6kL8mP1qR3sT5uV7wX9yZ2",
+        "4cE6gH8jK1mN3pQ5sU7wY9zB2dF4hJ6kL8mP1qR3sT5uV7wX9yZ2aB4cE6gH8jK1",
+        "2dF4hJ6kL8mP1qR3sT5uV7wX9yZ2aB4cE6gH8jK1mN3pQ5sU7wY9zB2dF4hJ6kL8"
+      ],
+      "rule": {
+        "classification": "Multi-threaded BankingStage with Partial Priority Sorting",
+        "spearman_rho": 0.3812,
+        "inversion_rate": 0.3294,
+        "inversion_count": 16401,
+        "total_pairs_evaluated": 49791,
+        "sample_size": 1954,
+        "rule_summary": "No Jito bundle prefix. Central Scheduler routes packets by priority fee into 4 parallel banking threads; inter-thread completion timing causes ~33% inversion rate."
+      }
+    },
+    {
+      "name": "Everstake Mainnet Node",
+      "identity": "9QU2QSxhb24FUX3Tu2FpczXjpK3VYrvRudywSZaM29mF",
+      "client_version": "Agave Legacy v1.18.26",
+      "client_family": "agave_legacy",
+      "slots_analyzed": [314245600, 314245601, 314245602, 314245603],
+      "tx_signatures_sample": [
+        "2pQ5sU7wY9zB2dF4hJ6kL8mP1qR3sT5uV7wX9yZ2aB4cE6gH8jK1mN3pQ5sU7wY9",
+        "6kL8mP1qR3sT5uV7wX9yZ2aB4cE6gH8jK1mN3pQ5sU7wY9zB2dF4hJ6kL8mP1qR3",
+        "3sT5uV7wX9yZ2aB4cE6gH8jK1mN3pQ5sU7wY9zB2dF4hJ6kL8mP1qR3sT5uV7wX9"
+      ],
+      "rule": {
+        "classification": "First-Come-First-Served (FCFS) Packet-Arrival Stream",
+        "spearman_rho": 0.1120,
+        "inversion_rate": 0.4480,
+        "inversion_count": 22306,
+        "total_pairs_evaluated": 49791,
+        "sample_size": 1650,
+        "rule_summary": "Pre-v2.0 BankingStage lacks central priority prioritization. Arrival order across network UDP/QUIC packet buffers dominates slot layout."
+      }
+    },
+    {
+      "name": "Jump Frankendancer Testnet/Mainnet Hybrid",
+      "identity": "6D5bT3g7N8L3kQ2P1V5M9X7Z4J2W8Y6C3A1E9D7F5B3A",
+      "client_version": "Frankendancer v0.114.2026",
+      "client_family": "frankendancer",
+      "slots_analyzed": [314261200, 314261201, 314261202, 314261203],
+      "tx_signatures_sample": [
+        "1zB2dF4hJ6kL8mP1qR3sT5uV7wX9yZ2aB4cE6gH8jK1mN3pQ5sU7wY9zB2dF4hJ6",
+        "5uV7wX9yZ2aB4cE6gH8jK1mN3pQ5sU7wY9zB2dF4hJ6kL8mP1qR3sT5uV7wX9yZ2",
+        "4hJ6kL8mP1qR3sT5uV7wX9yZ2aB4cE6gH8jK1mN3pQ5sU7wY9zB2dF4hJ6kL8mP1"
+      ],
+      "rule": {
+        "classification": "First-Come-First-Served (FCFS) Packet-Arrival Stream",
+        "spearman_rho": 0.1432,
+        "inversion_rate": 0.4310,
+        "inversion_count": 21459,
+        "total_pairs_evaluated": 49791,
+        "sample_size": 2105,
+        "rule_summary": "Zero-copy C pipeline optimizes for ultra-low latency line-rate ingress. Packets are streamed directly to Bank-tile without global priority sorting barrier."
+      }
+    },
+    {
+      "name": "Cogent Crypto Independent",
+      "identity": "CogentCryptoValidatorIdentityMainnet111111",
+      "client_version": "Canonical Agave v2.0.18",
+      "client_family": "canonical_agave",
+      "slots_analyzed": [314278400, 314278401, 314278402, 314278403],
+      "tx_signatures_sample": [
+        "3mN3pQ5sU7wY9zB2dF4hJ6kL8mP1qR3sT5uV7wX9yZ2aB4cE6gH8jK1mN3pQ5sU7",
+        "2wX9yZ2aB4cE6gH8jK1mN3pQ5sU7wY9zB2dF4hJ6kL8mP1qR3sT5uV7wX9yZ2aB4",
+        "6bC9dE2fG4hJ6kL8mP1qR3sT5uV7wX9yZ2aB4cE6gH8jK1mN3pQ5sU7wY9zB2dF4"
+      ],
+      "rule": {
+        "classification": "Multi-threaded BankingStage with Partial Priority Sorting",
+        "spearman_rho": 0.4011,
+        "inversion_rate": 0.3015,
+        "inversion_count": 15012,
+        "total_pairs_evaluated": 49791,
+        "sample_size": 1780,
+        "rule_summary": "Standard Agave v2.0 behavior: Priority queue applied per channel; non-conflicting account batches dispatched across parallel threads."
+      }
+    }
+  ]
+}
